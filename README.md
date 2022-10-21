@@ -13,7 +13,6 @@
 To get a local copy of this exercice, Please follow these simple example steps.
 
 #### 1. Clone this repository or download the Zip folder:"
-
 ```bash command
 $ git clone https://github.com/hammaazarok/blog-app.git
 ```
@@ -38,7 +37,6 @@ rails server
 
 
 ## 🤝 Contributing
-
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
