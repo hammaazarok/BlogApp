@@ -1,2 +1,18 @@
-<h1>User Details by ID</h1>
-<p>Display user's details based on the User ID</p>
+<h1>User Details</h1>
+<div class="user">
+<%= render 'partials/user', user: @user %>
+<div class='bio'>
+<p><%= @user.bio %></p>
+</div>
+<h5>Recent posts</h5>
+<ul class='card'>
+    <% @user.recent_posts.each do |post| %>
+      <a href="/users/<%= @user.id %>/posts/<%= post.id %> ">
+        <%= render 'partials/post', post: post %>
+      </a>
+    <% end %>
+</ul>
+<a href="/users/<%= @user.id %>/posts">
+        <button> See all Posts </button>
+      </a>
+</div>
