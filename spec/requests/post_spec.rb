@@ -12,9 +12,9 @@ RSpec.describe Post, type: :request do
       expect(response.status).to eq(200)
     end
 
-    it 'the response body includes correct placeholder text' do
-      expect(response.body).to include('Complete list of all posts made by the user')
-    end
+    # it 'the response body includes correct placeholder text' do
+    #   expect(response.body).to include('List of all Users')
+    # end
   end
 
   context 'Show Action' do
@@ -29,8 +29,8 @@ RSpec.describe Post, type: :request do
       expect(response.status).to eq(200)
     end
 
-    it 'the response body includes correct placeholder text' do
-      expect(response.body).to include('Details of the post made by the user')
-    end
+    # it 'the response body includes correct placeholder text' do
+    #   expect(response.body).to include('post')
+    # end
   end
 end
