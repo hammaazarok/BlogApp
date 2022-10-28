@@ -22,10 +22,19 @@ you@your-Pc-name:~$ cd <folder>
 ```
 #### 3. Press Enter to navigate to your local clone.
 
-#### 4. Go to your terminal and run the app with the following command:
-```bash command
+#### 4. Go to your terminal and run this command to setup the database
+
+``` bash command
+rails db:create && rails db:migrate
+
+``` 
+
+#### 5. Start the app server with the following command:
+
+``` bash command
 rails server
-```
+
+``` 
 - Navigate to http://localhost:3000/
 
 ## Author

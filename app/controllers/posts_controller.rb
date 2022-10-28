@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   # form actions
   def new
-    @user = User.find(params[:user_id])
+    @user = User.find(current_user.id)
     @post = @user.post.new
     render :new, locals: { post: @post }
   end
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
       format.html do
         if @post.save
           flash[:success] = 'Post created successfully'
-          redirect_to user_posts_path(@user)
+          redirect_to "#{user_posts_path(@user)}/#{@post.id}"
         else
           flash[:error] = 'Post not created'
           render :new, locals: { post: @post }
