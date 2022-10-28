@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  # form actions 
+  # form actions
   def new
     @user = User.find(params[:user_id])
     @post = @user.post.new
